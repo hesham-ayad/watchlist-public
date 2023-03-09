@@ -1,0 +1,82 @@
+@font-face {
+    src: url(../fonts/Millimetre/regular/Millimetre-regular.woff2);
+    font-family: "milli";
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.login {
+    font-family: milli;
+    background-color: rgba(21, 58, 36, 1);
+    background-image: url('https://watchlist.hesham.studio/wp-content/uploads/2023/02/noise.png');
+    color: black;
+}
+
+#login h1 a,
+.login h1 a {
+    background-image: url(../img/android-chrome-192x192.png);
+}
+
+@media (min-width:500px) {
+
+    #login h1 a,
+    .login h1 a {
+        background-image: url(../img/android-chrome-512x512.png);
+    }
+}
+
+
+
+#loginform {
+    background-color: rgba(66, 99, 79, 1);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+#loginform label {
+    color: black;
+    letter-spacing: .5px;
+}
+
+#loginform input {
+    background-color: rgba(153, 232, 184, 1);
+    color: black;
+    border-color: black;
+}
+
+
+#loginform input[type=text]:focus,
+#loginform input[type=password]:focus {
+    border-color: #8113f0;
+}
+
+#loginform #rememberme {
+    border: 2px solid black;
+    background-color: #fff;
+}
+
+#loginform input[type=submit] {
+    border: 2px solid black;
+}
+
+
+@media (min-width:500px) {
+    @media (hover: hover) {
+
+
+        #loginform input[type=submit]:hover {
+            background-color: #121212;
+        }
+
+        #loginform input[type=submit]:hover {
+            color: #f7e9dd;
+        }
+
+    }
+}
+
+
+.login #backtoblog a, .login #nav a {
+    color: black;
+}

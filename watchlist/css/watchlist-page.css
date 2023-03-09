@@ -1,0 +1,153 @@
+main {    
+    display: grid;
+}
+
+.view-state-btns-con {
+    align-self: start;
+    border-bottom: 1px solid black;
+    padding-block: 3rem;
+
+}
+
+.view-state-btns-con button {
+    margin-top: 10px;
+    border: none;
+    transition: margin-left .2s;
+    width: 90%;
+    background-color: transparent;  
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.view-state-btns-con button.bumped {
+    top: -48px;
+    margin-left: 1rem;
+    width: calc(100% - 2rem);
+    background-color: var(--hover-bg-color-1);
+    color: var(--main-text-color);
+}
+
+.view-state-btns-con button>span {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    border: none;
+    padding: .3rem .5rem;   
+    background-color: transparent;
+    pointer-events: none;
+    
+}
+
+.view-state-btns-con button>span>span {
+    pointer-events: none;
+}
+
+@media (hover: hover) { 
+
+    .view-state-btns-con button:hover > span  {
+        background-color: var(--hover-bg-color-1);
+        color: var(--main-text-color);
+    }
+
+    .view-state-btns-con button:hover > span::after  {
+        background-color: var(--main-text-color);
+    }
+}
+
+.view-state-btns-con button>span::after {
+    justify-self: end;
+    content: "";
+    width: 0.8rem;
+    height: 0.5rem;
+    background-color: black;
+
+}
+
+.view-state-btns-con button>span::after {
+    clip-path: polygon(100% 100%, 0% 100%, 50% 0%);
+    transition: clip-path .25s;
+}
+
+.view-state-btns-con button.bumped>span::after {
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    background-color: var(--main-text-color);
+}
+
+
+
+
+.saved-titles-cards-con {
+    display: grid;
+}
+
+.search-movie-card-container {
+    margin-inline: 20px;
+    background-color: var(--filter-inputs-con-bg-color);
+}
+
+.titles-con{
+    display: none;
+    overflow: hidden;
+}
+
+.titles-con.expanded:has(.search-movie-card-container){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 400px));
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+    overflow: auto;
+    padding: 2rem 1rem;
+    background-color: #46706F;
+    width: 100%;
+}
+
+
+
+.dia-fetch-btns-container {
+    margin-inline: auto;
+}
+
+.user-rating {
+    position: absolute;
+    top: 21px;
+    left: 25px;
+    display: grid;
+    grid-template-areas: 'inner';
+    width: 5rem;
+    height: 5rem;
+   isolation: isolate;
+   transform: rotate(-10deg);
+   filter: drop-shadow(0 0  10px rgba(0, 0, 0, 0.5));
+
+}
+
+.user-rating span {
+    grid-area: inner;
+    justify-self: center;
+    align-self: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.user-rating::after {
+    grid-area: inner;
+    z-index: -1;
+    display: inline-block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #daa52094;
+    clip-path: polygon(50% 0%, 65% 29%, 98% 35%, 73% 60%, 79% 91%, 50% 75%, 21% 91%, 25% 59%, 2% 35%, 33% 28%);
+
+}
+
+
+
+.search-movie-card-add-btn span {
+    pointer-events: none;
+}
