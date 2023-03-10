@@ -189,45 +189,12 @@ function wordpress_logo_url() {
 add_filter( 'login_headerurl', 'wordpress_logo_url' );
 
 
-
-
-
-
-// take control of login page css
-// function ourLoginCss(){
-// wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i'); //to load font from google
-
-// wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); //to load the social media icons at the footer
-
-// wp_enqueue_style('university_main_styles', get_theme_file_uri('/build/style-index.css'));
-
-// wp_enqueue_style('university_extra_styles', get_theme_file_uri('/build/index.css'));
-
-// }
-// add_action( 'login_enqueue_scripts', 'ourLoginCss');
-
-
-
-// change the h1 text of wp-login page
-// function my_login_logo_url_title(){
-// return get_bloginfo('name');
-// }
-// add_filter('login_headertext', 'my_login_logo_url_title');
-
-
-
-
-
-
-
-
 function login_css() {
 	printf( "<link rel=\"shortcut icon\" type=\"image/vnd.microsoft.icon\" href=\"%s/img/favicon.ico\" />\n", esc_url( get_theme_file_uri() ) );
 	printf( "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"%s/img/apple-touch-icon.png\" />\n", esc_url( get_theme_file_uri() ) );
 	printf( "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"%s/img/favicon-32x32.png\" />\n", esc_url( get_theme_file_uri() ) );
 	printf( "<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"%s/img/favicon-16x16.png\" />\n", esc_url( get_theme_file_uri() ) );
-	printf( "<link rel=\"manifest\" type=\"image/png\" sizes=\"16x16\" href=\"%s/img/site.webmanifest\" />\n", esc_url( get_theme_file_uri() ) );
 
-	wp_enqueue_style( 'watchlist_css_reset', get_theme_file_uri( '/css/login-style.css' ), null, '1.0.0' );
+	wp_enqueue_style( 'watchlist_css_reset', get_theme_file_uri( '/css/login-style.css' ), null, '1.0.1' );
 }
 add_action( 'login_enqueue_scripts', 'login_css' );
