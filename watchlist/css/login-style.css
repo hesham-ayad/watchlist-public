@@ -25,29 +25,37 @@ body.login {
     }
 }
 
+.login #backtoblog a, .login #nav a {
+    color: black;
+}
 
+.login #backtoblog a:hover, .login #nav a:hover {
+    color: #f7e9dd;
+}
 
-#loginform {
+.login form {
     background-color: rgba(66, 99, 79, 1);
     border: 2px solid black;
     border-radius: 5px;
 }
 
 
-#loginform label {
+.login label{
     color: black;
     letter-spacing: .5px;
 }
 
-#loginform input {
+.login input,
+.login .button-primary{
     background-color: rgba(153, 232, 184, 1);
     color: black;
     border-color: black;
 }
 
 
-#loginform input[type=text]:focus,
-#loginform input[type=password]:focus {
+.login input[type=text]:focus,
+.login input[type=password]:focus,
+.login input[type=email]:focus {
     border-color: #8113f0;
 }
 
@@ -56,27 +64,20 @@ body.login {
     background-color: #fff;
 }
 
-#loginform input[type=submit] {
+.login input[type=submit],
+.login .button-primary {
     border: 2px solid black;
 }
 
 
 @media (min-width:500px) {
     @media (hover: hover) {
-
-
-        #loginform input[type=submit]:hover {
+        .login input[type=submit]:hover,
+        .login .button-primary:hover {
             background-color: #121212;
-        }
-
-        #loginform input[type=submit]:hover {
+            border-color: #f7e9dd;
             color: #f7e9dd;
         }
 
     }
-}
-
-
-.login #backtoblog a, .login #nav a {
-    color: black;
 }
